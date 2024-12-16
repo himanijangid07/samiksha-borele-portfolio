@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Poppins";
+  }
+
+/*** Spinner Start ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .8s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+ }
+
+ #spinner.show {
+     transition: opacity .8s ease-out, visibility 0s linear .0s;
+     visibility: visible;
+     opacity: 1;
+     -webkit-transition: opacity .8s ease-out, visibility 0s linear .0s;
+     -moz-transition: opacity .8s ease-out, visibility 0s linear .0s;
+     -ms-transition: opacity .8s ease-out, visibility 0s linear .0s;
+     -o-transition: opacity .8s ease-out, visibility 0s linear .0s;
+}
+
+#typing-effect {
+    font-size: 2.5rem;
+    font-weight: bold;
+    white-space: nowrap; /* Keeps text on one line */
+    overflow: hidden;    /* Hides overflowing text */
+    border-right: 2px solid black; /* Simulates cursor */
+    display: inline-block; /* Aligns the border cursor with text */
+}
+
+/* Cursor blinking animation */
+@keyframes blink-cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.about {
+    text-align: justify;
+}
