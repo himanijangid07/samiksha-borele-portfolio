@@ -27,20 +27,25 @@
 }
 
 #typing-effect {
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 5vw, 2.5rem); /* Responsive font size */
     font-weight: bold;
-    white-space: nowrap; /* Keeps text on one line */
-    overflow: hidden;    /* Hides overflowing text */
+    white-space: wrap; /* Keeps text on one line */
+    overflow: hidden; /* Hides overflowing text */
     border-right: 2px solid black; /* Simulates cursor */
     display: inline-block; /* Aligns the border cursor with text */
-}
+  }
 
-/* Cursor blinking animation */
-@keyframes blink-cursor {
+  /* Cursor blinking animation */
+  @keyframes blink-cursor {
     50% {
-        border-color: transparent;
+      border-color: transparent;
     }
-}
+  }
+
+  /* Add some animation for smoother resizing (optional) */
+  #typing-effect {
+    transition: font-size 0.3s ease;
+  }
 
 .about {
     text-align: justify;
