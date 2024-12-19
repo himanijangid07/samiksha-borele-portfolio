@@ -50,3 +50,22 @@
 .about {
     text-align: justify;
 }
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 360px) {
+    .experience {
+        justify-content: center;
+        align-items: center;
+    }
+}
