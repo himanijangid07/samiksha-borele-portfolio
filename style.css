@@ -1,12 +1,15 @@
+/* Global Box Sizing */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
-  
-  body {
+}
+
+/* Body Font */
+body {
     font-family: "Poppins";
-  }
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
 
 /*** Spinner Start ***/
 #spinner {
@@ -14,43 +17,49 @@
     visibility: hidden;
     transition: opacity .8s ease-out, visibility 0s linear .5s;
     z-index: 99999;
- }
-
- #spinner.show {
-     transition: opacity .8s ease-out, visibility 0s linear .0s;
-     visibility: visible;
-     opacity: 1;
-     -webkit-transition: opacity .8s ease-out, visibility 0s linear .0s;
-     -moz-transition: opacity .8s ease-out, visibility 0s linear .0s;
-     -ms-transition: opacity .8s ease-out, visibility 0s linear .0s;
-     -o-transition: opacity .8s ease-out, visibility 0s linear .0s;
 }
 
+#spinner.show {
+    transition: opacity .8s ease-out, visibility 0s linear .0s;
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: opacity .8s ease-out, visibility 0s linear .0s;
+    -moz-transition: opacity .8s ease-out, visibility 0s linear .0s;
+    -ms-transition: opacity .8s ease-out, visibility 0s linear .0s;
+    -o-transition: opacity .8s ease-out, visibility 0s linear .0s;
+}
+
+/* Text Alignment */
 .about {
     text-align: justify;
 }
 
-.intro {
+/* Flex Containers */
+.intro, .experience, .achievements {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap; /* Ensure elements can wrap on small screens */
 }
 
-.experience {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.achievements {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+/* Specific Mobile Styling */
 @media screen and (max-width: 360px) {
-    .experience {
-        justify-content: center;
-        align-items: center;
+    .intro, .experience, .achievements {
+        flex-direction: column; /* Stack content vertically on small screens */
+        text-align: center;      /* Center text for small screens */
+    }
+
+    /* Adjust images if they exist */
+    .intro img, .experience img, .achievements img {
+        max-width: 100%;
+        height: auto;  /* Ensure images scale properly */
+    }
+}
+
+/* Optional: Further adjustments for larger screens if needed */
+@media screen and (max-width: 768px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;  /* Add some padding on smaller screens */
     }
 }
