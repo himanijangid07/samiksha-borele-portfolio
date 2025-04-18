@@ -9,130 +9,59 @@
 body {
   margin: 0;
   font-family: 'Poetsen One', sans-serif;
-  background-color: #052d44;
-  color: #f8f9fa;
-  overflow: hidden;
 }
 
-.gate-banner {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  z-index: 9999;
-  background-color: #052d44; /* Use a solid color background instead of gradient */
-  overflow-x: hidden;
-}
-
-/* Shared gradient on both gates */
-.left-gate, .right-gate {
-  position: absolute;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(45deg, #770737, #052d44);
-  background-size: 200% 100%;
-  transition: transform 1s ease-in-out;
-  z-index: 2;
-}
-
-/* Left gate shows left side of the gradient */
-.left-gate {
-  left: 0;
-  background-position: left;
-}
-
-/* Right gate shows right side of the gradient */
-.right-gate {
-  right: 0;
-  background-position: right;
-}
-
-/* Gate opening animation */
-.gate-banner.open .left-gate {
-  transform: translateX(-100%);
-}
-
-.gate-banner.open .right-gate {
-  transform: translateX(100%);
-}
-
-.gate-content {
-  position: relative;
-  z-index: 3;
-}
-
-.gate-content.hide {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  -webkit-transition: opacity 0.3s ease;
-  -moz-transition: opacity 0.3s ease;
-  -ms-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-}
-
-#openBtn {
-  border: 1px solid goldenrod;
-  color: goldenrod;
-}
-
-.image-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 1rem;
+.image-box {
+  background: #fff;
   padding: 1rem;
-  max-width: 100%;
-  margin: 0 auto;
-  box-sizing: border-box;
+  border-radius: 20px;
 }
 
-.image-container img {
+.image-box:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.img-wrapper {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.img-wrapper img {
+  object-fit: cover;
   width: 100%;
   height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-.image-container img:hover {
-  transform: scale(1.05);
-}
-
-/* Optional: make sure section has enough space and centers content */
-.about-section {
+.gradient-bg {
+  background: linear-gradient(45deg, #770737, #052d44);
+  height: 100vh;
+  padding: 5rem 1rem; /* fallback/default */
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem 1rem;
-  background: linear-gradient(45deg, #770737, #052d44);
-  min-height: 100vh;
-  text-align: center;
 }
 
-
-/* Positioning the H1 in a semi-circle above the images */
-.content {
-  position: relative;
-  z-index: 2;
-}
-
-.content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
-
-.content h3 {
-  font-size: 1.5rem;
-}
-
-@media screen and (max-width: 768px) {
-  .image-container img:last-child {
-    display: none;
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .gradient-bg {
+    height: auto;
+    padding: 2rem 1rem; /* less vertical padding on small screens */
   }
 }
+
+.milestone-box {
+  background-color: #052d44;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  margin: 10px;
+  width: 300px;
+  padding: 10px;
+}
+
+.milestone-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+

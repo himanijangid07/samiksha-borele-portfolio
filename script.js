@@ -109,26 +109,3 @@
 
 })(jQuery);
 
-document.addEventListener("DOMContentLoaded", function () {
-
-    const openBtn = document.getElementById("openBtn");
-    const banner = document.getElementById("gateBanner");
-    const websiteContent = document.getElementById("websiteContent");
-    const gateContent = document.querySelector(".gate-content");
-
-    openBtn.addEventListener("click", () => {
-        gateContent.classList.add("hide");
-      banner.classList.add("open");
-
-      setTimeout(() => {
-        banner.style.display = "none";
-        websiteContent.style.display = "block";
-        document.body.style.overflow = "auto"; // allow scroll
-      }, 1000); // match transition duration
-    });
-
-    // Always start with gate shown and content hidden
-    banner.style.display = "flex";
-    websiteContent.style.display = "none";
-    document.body.style.overflow = "hidden";
-  });
