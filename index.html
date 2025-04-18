@@ -31,225 +31,48 @@
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
     <link href="lib/owlcarousel/owl.carousel.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="lib/wow/wow.min.js"></script>
+      <script src="lib/easing/easing.min.js"></script>
+      <script src="lib/waypoints/waypoints.min.js"></script>
+      <script src="lib/counterup/counterup.min.js"></script>
+      <script src="lib/lightbox/js/lightbox.min.js"></script>
+      <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+      <script src="script.js"></script>
 </head>
 <body>
-    <div
-      id="spinner"
-      class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center"
-    >
-      <div class="spinner-grow text-primary" role="status"></div>
-    </div>
 
-    <!-- Full-width Gradient Background Wrapper -->
-<div style="background: linear-gradient(135deg, #f8f9fa, #e0eafc); padding-top: 100px; padding-bottom: 50px;">
-  <div class="container">
-    <div class="row justify-content-center align-items-center g-5 shadow-lg rounded-4 p-4 bg-white" style="overflow: hidden;">
-      
-      <!-- Image Section -->
-      <div class="col-lg-4 col-12 text-center">
-        <img src="image/samiksha.png" alt="Dr. Samiksha Borele" class="img-fluid rounded-circle shadow" style="max-height: 300px; object-fit: cover; border: 4px solid #007bff;">
-      </div>
-
-      <!-- Text Section -->
-      <div class="col-lg-8 col-12">
-        <h2 class="fw-bold text-center text-lg-start mb-2" style="color: #007bff; border-bottom: 3px solid #007bff; display: inline-block;">Dr. Samiksha Borele</h2>
-        <h5 class="text-muted text-center text-lg-start mb-4">President, Borele World</h5>
-        <p class="text-dark mb-3" style="line-height: 1.8; font-size: 1.05rem;">
-          Dr. Samiksha Borele is a visionary leader and President of Borele World, a renowned real estate and hospitality company. With a decade-long tenure, she has been instrumental in shaping the company's future, driving growth, and exploring new ventures.
-        </p>
-        <p class="text-dark" style="line-height: 1.8; font-size: 1.05rem;">
-          Her expertise spans real estate, marketing, and international business, backed by prestigious degrees from IIPM (MBA in Marketing and HR) and La Trobe University (MBA in International Business Management).
-        </p>
-        <p class="text-dark" style="line-height: 1.8; font-size: 1.05rem;">
-          Under her leadership, Borele World has expanded its footprint, diversified its offerings, and established itself as a trusted name in the industry. Dr. Borele's strategic vision and dedication to excellence have earned her respect across the business community.
-        </p>
-      </div>
-
+  <div class="gate-banner intro" id="gateBanner">
+    <div class="left-gate"></div>
+    <div class="right-gate"></div>
+    <div class="gate-content text-center text-white">
+      <h3>Welcome To</h3>
+      <h1 class="fw-bold">Dr. Samiksha Borele's</h1>
+      <h3>World</h3>
+      <button class="btn mt-4" id="openBtn">Click to Enter</button>
     </div>
   </div>
-</div>
 
-    
-    
+  <div class="website-content" id="websiteContent">
+    <!-- Add your real website sections here -->
+    <section class="about-section p-5">
+      <div class="content">
+        <h1 class="fw-bold py-3">Dr. Samiksha Borele</h1>
+        <h3>President, Borele World</h3>
+      </div>
+      <div class="image-container">
+        <img src="image/about1.jpeg" alt="">
+        <img src="image/about2.jpeg" alt="">
+        <img src="image/about3.jpeg" alt="">
+        <img src="image/about4.jpeg" alt="">
+        <img src="image/about5.jpeg" alt="">
+      </div>
+    </section>
+  </div>
 
     <!-- Expertise Section with Gradient Background -->
-<div style="background: linear-gradient(135deg, #e0eafc, #f8f9fa); padding: 80px 0;">
-  <div class="container">
-    <h2 class="text-center fw-bold mb-4" style="color: #0056b3;">Expertise / Skills</h2>
-    <p class="text-center mb-5" style="font-size: 1.1rem; color: #444;">Dr. Samiksha Borele possesses a unique blend of skills and expertise, including:</p>
-
-    <!-- Skills Grid -->
-    <div class="row g-4">
-      <!-- Skill Card -->
-      <div class="col-lg-4 col-md-6">
-        <div class="p-4 bg-white rounded-4 shadow-sm h-100 transition hover-shadow">
-          <h5 class="fw-bold text-primary mb-3">Real Estate Development</h5>
-          <ol class="ps-3 text-muted">
-            <li>Land acquisition and development</li>
-            <li>Project planning and execution</li>
-            <li>Property management</li>
-          </ol>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="p-4 bg-white rounded-4 shadow-sm h-100 transition hover-shadow">
-          <h5 class="fw-bold text-primary mb-3">Hospitality Management</h5>
-          <ol class="ps-3 text-muted">
-            <li>Hotel operations and management</li>
-            <li>Customer service excellence</li>
-            <li>Revenue growth strategies</li>
-          </ol>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="p-4 bg-white rounded-4 shadow-sm h-100 transition hover-shadow">
-          <h5 class="fw-bold text-primary mb-3">Marketing Strategy</h5>
-          <ol class="ps-3 text-muted">
-            <li>Brand development and positioning</li>
-            <li>Digital marketing and advertising</li>
-            <li>Public relations</li>
-          </ol>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="p-4 bg-white rounded-4 shadow-sm h-100 transition hover-shadow">
-          <h5 class="fw-bold text-primary mb-3">Human Resources</h5>
-          <ol class="ps-3 text-muted">
-            <li>Talent acquisition and development</li>
-            <li>Performance management</li>
-            <li>Organizational development</li>
-          </ol>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="p-4 bg-white rounded-4 shadow-sm h-100 transition hover-shadow">
-          <h5 class="fw-bold text-primary mb-3">International Business</h5>
-          <ol class="ps-3 text-muted">
-            <li>Global market analysis</li>
-            <li>Cross-cultural management</li>
-            <li>International trade and commerce</li>
-          </ol>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="p-4 bg-white rounded-4 shadow-sm h-100 transition hover-shadow">
-          <h5 class="fw-bold text-primary mb-3">Leadership</h5>
-          <ol class="ps-3 text-muted">
-            <li>Strategic planning and implementation</li>
-            <li>Team building and motivation</li>
-            <li>Change management</li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-    <!-- Experience Section -->
-    <div class="container-fluid py-5" style="background: linear-gradient(135deg, #e0eafc, #f8f9fa);">
-      <div class="container">
-        <h2 class="text-center fw-bold mb-5" style="color: #0056b3;">Achievements</h2>
-    
-        <!-- General Achievements -->
-        <div class="row mb-4">
-          <div class="col-12">
-            <div class="card p-4 shadow-sm border-0 bg-white">
-              <h5 class="fw-bold text-primary">General Achievements</h5>
-              <ol class="ps-3 text-dark">
-                <li>Introduced hospitality segment, creating a new revenue stream and diversifying company offerings.</li>
-                <li>Developed and launched <strong>Tiana Inn</strong>, a flagship hospitality project.</li>
-                <li>Conceptualized and executed upcoming five-star luxury hotel and banquet facilities.</li>
-                <li>Contributed to Borele World's recognition as a leading real estate and hospitality company.</li>
-                <li>Received industry awards and recognition for innovative leadership.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Career/Professional Achievements -->
-        <div class="row mb-4">
-          <div class="col-12">
-            <div class="card p-4 shadow-sm border-0 bg-white">
-              <h5 class="fw-bold text-primary">Career/Professional Achievements</h5>
-              <ol class="ps-3 text-dark">
-                <li>Advanced Business Etiquette & Corporate Grooming Program – Savoir Faire Academie, 2024.</li>
-                <li>Global Opportunities & Threat Analysis Program – IIPM.</li>
-                <li>Global Management Challenge – La Trobe University, 2006.</li>
-                <li>Global Business Environment Programme – Stansfield College, 2004.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Other Awards and Image -->
-        <div class="row align-items-start g-4 mb-5">
-          <div class="col-lg-8">
-            <div class="card p-4 shadow-sm border-0 bg-white">
-              <h5 class="fw-bold text-primary">Other Awards and Achievements</h5>
-              <ol class="ps-3 text-dark">
-                <li>STARZ of India Award 2024 – “Promising Life Coach” by Vkonnect Star Event & Entertainment.</li>
-                <li>Certified Leadership & Executive Coach – NLP Coaching Academy, 2017.</li>
-                <li>Active Charter Member – Toastmasters Internationals since 2004.</li>
-              </ol>
-            </div>
-          </div>
-          <div class="col-lg-4 d-flex justify-content-center">
-            <img src="image/3.jpeg" alt="Award" class="img-fluid rounded shadow" style="height: 400px; object-fit: cover;">
-          </div>
-        </div>
-    
-        <!-- Lifetime Achievements -->
-        <div class="row mb-4">
-          <div class="col-12">
-            <div class="card p-4 shadow-sm border-0 bg-white">
-              <h5 class="fw-bold text-primary">Lifetime Achievements</h5>
-              <ol class="ps-3 text-dark">
-                <li>Swami Vivekananda ChangeMaker Award 2021 – MENTORx.</li>
-                <li>Awarded at Indian Innovative Startup Conference 2022 – Sharda University.</li>
-                <li>Guest of Honor at multiple summits: CT University, ITCAIR 2021, MENTORx, RevUp, and more.</li>
-                <li>Golden Pinnacle Award 2021 – National Sports & Youth Development Council.</li>
-                <li>Keynote Speaker at WOMENOMICS, Global Youth Conference, and National Mentoring Day 2020.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Professional Recognitions -->
-        <div class="row mb-4">
-          <div class="col-12">
-            <div class="card p-4 shadow-sm border-0 bg-white">
-              <h5 class="fw-bold text-primary">Professional Recognitions</h5>
-              <ol class="ps-3 text-dark">
-                <li>Keynote Speaker – Indo-Canadian Student Mentoring Summit, ICACI Canada.</li>
-                <li>Recognized as Visionary Leader – Workshop at Chitkara University.</li>
-                <li>Speaker – 5-day International Skill Development Program, EDU Leader Conference 2020.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    
-
-
-    <div class="container-fluid py-5" style="background: linear-gradient(135deg, #e0eafc, #f8f9fa);">
-      <div class="container">
-        <h2 class="text-center fw-bold mb-4">Get In Touch</h2>
-        <ul class="list-unstyled text-center">
-          <li><strong>Phone:</strong> +91 92721 00771</li>
-          <li><strong>Mail:</strong> <a href="mailto:contact@boreleworld.com">contact@boreleworld.com</a></li>
-          <li><strong>Website:</strong> <a href="https://www.boreleworld.com" target="_blank">www.boreleworld.com</a></li>
-          <li><strong>Address:</strong> Borele World Tower, Plot No. 9, Abhyankar Nagar, Nagpur-440010 Maharashtra, INDIA</li>
-        </ul>
-      </div>
-    </div>
     
     <div class="container-fluid copyright py-4 bg-dark text-white">
       <div class="container">

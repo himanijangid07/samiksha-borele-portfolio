@@ -1,65 +1,121 @@
-/* Global Box Sizing */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Body Font */
 body {
-    font-family: "Poppins";
-    overflow-x: hidden; /* Prevent horizontal overflow */
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #052d44;
+  color: #f8f9fa;
+  overflow: hidden;
 }
 
-/*** Spinner Start ***/
-#spinner {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .8s ease-out, visibility 0s linear .5s;
-    z-index: 99999;
+.gate-banner {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 9999;
+  background-color: #052d44; /* Use a solid color background instead of gradient */
 }
 
-#spinner.show {
-    transition: opacity .8s ease-out, visibility 0s linear .0s;
-    visibility: visible;
-    opacity: 1;
-    -webkit-transition: opacity .8s ease-out, visibility 0s linear .0s;
-    -moz-transition: opacity .8s ease-out, visibility 0s linear .0s;
-    -ms-transition: opacity .8s ease-out, visibility 0s linear .0s;
-    -o-transition: opacity .8s ease-out, visibility 0s linear .0s;
+/* Shared gradient on both gates */
+.left-gate, .right-gate {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(45deg, #770737, #052d44);
+  background-size: 200% 100%;
+  transition: transform 1s ease-in-out;
+  z-index: 2;
 }
 
-/* Text Alignment */
-.about {
-    text-align: justify;
+/* Left gate shows left side of the gradient */
+.left-gate {
+  left: 0;
+  background-position: left;
 }
 
-/* Flex Containers */
-.intro, .experience, .achievements {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; /* Ensure elements can wrap on small screens */
+/* Right gate shows right side of the gradient */
+.right-gate {
+  right: 0;
+  background-position: right;
 }
 
-/* Specific Mobile Styling */
-@media screen and (max-width: 360px) {
-    .intro, .experience, .achievements {
-        flex-direction: column; /* Stack content vertically on small screens */
-        text-align: center;      /* Center text for small screens */
-    }
-
-    /* Adjust images if they exist */
-    .intro img, .experience img, .achievements img {
-        max-width: 100%;
-        height: auto;  /* Ensure images scale properly */
-    }
+/* Gate opening animation */
+.gate-banner.open .left-gate {
+  transform: translateX(-100%);
 }
 
-/* Optional: Further adjustments for larger screens if needed */
-@media screen and (max-width: 768px) {
-    .container {
-        padding-left: 20px;
-        padding-right: 20px;  /* Add some padding on smaller screens */
-    }
+.gate-banner.open .right-gate {
+  transform: translateX(100%);
+}
+
+.gate-content {
+  position: relative;
+  z-index: 3;
+}
+
+.gate-content.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+}
+
+#openBtn {
+  border: 1px solid goldenrod;
+  color: goldenrod;
+}
+
+.about-section {
+  position: relative;
+  text-align: center;
+  height: 100vh; /* Full height of the viewport */
+  padding: 5rem; /* Adjust padding as necessary */
+  background: linear-gradient(45deg, #770737, #052d44);
+}
+
+.image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+.image-container img {
+  max-width: 150px; /* Adjust image size */
+  margin: 1rem;
+  border-radius: 10px; /* Optional: add border radius to images */
+}
+
+/* Positioning the H1 in a semi-circle above the images */
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.content h3 {
+  font-size: 1.5rem;
 }
