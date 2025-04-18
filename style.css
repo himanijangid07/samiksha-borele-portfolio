@@ -22,6 +22,7 @@ body {
   overflow: hidden;
   z-index: 9999;
   background-color: #052d44; /* Use a solid color background instead of gradient */
+  overflow-x: hidden;
 }
 
 /* Shared gradient on both gates */
@@ -77,32 +78,40 @@ body {
   color: goldenrod;
 }
 
-.about-section {
-  position: relative;
-  text-align: center;
-  height: 100vh; /* Full height of the viewport */
-  padding: 5rem; /* Adjust padding as necessary */
-  background: linear-gradient(45deg, #770737, #052d44);
-}
-
 .image-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .image-container img {
-  max-width: 150px; /* Adjust image size */
-  margin: 1rem;
-  border-radius: 10px; /* Optional: add border radius to images */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
+
+.image-container img:hover {
+  transform: scale(1.05);
+}
+
+/* Optional: make sure section has enough space and centers content */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(45deg, #770737, #052d44);
+  min-height: 100vh;
+  text-align: center;
+}
+
 
 /* Positioning the H1 in a semi-circle above the images */
 .content {
@@ -118,4 +127,10 @@ body {
 
 .content h3 {
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .image-container img:last-child {
+    display: none;
+  }
 }
