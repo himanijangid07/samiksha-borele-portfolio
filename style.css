@@ -65,3 +65,119 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+.awards1 {
+  background-color: #770737;
+  padding: 10px;
+  color: white;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+.awardBtn {
+  display: flex;
+  justify-content: center;
+}
+
+.awards2 ul li {
+  padding: 5px;
+}
+
+.about-box {
+  background-color: #052d44;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  margin: 10px;
+  width: 300px;
+  padding: 10px;
+}
+
+.about-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-box:nth-child(even) {
+  background-color: #770737;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  margin: 10px;
+  width: 300px;
+  padding: 10px;
+}
+
+.about-img {
+  max-width: 100%;      /* Ensures responsiveness */
+  width: 250px;         /* You can adjust this value */
+  border-radius: 15px;  /* Optional: rounded corners */
+}
+
+@media (max-width: 768px) {
+  .about-img {
+    width: 70%;         /* Smaller width for mobile */
+    margin: auto;
+    display: block;
+  }
+}
+
+.intro p {
+  text-align: justify;
+}
+
+.milestone-box:nth-child(even) {
+  background-color: #770737;
+}
+
+.milestone-box:last-child {
+  background-color: #052d44;
+}
+
+/* Box styling */
+.box {
+  background-color: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  height: 100%; /* Ensure the box has consistent height */
+}
+
+/* Ensure proper spacing between boxes */
+.row {
+  margin-bottom: 20px;
+}
+
+/* Justify text inside boxes */
+.text-justify {
+  text-align: justify;
+}
+
+/* Set equal height for both boxes in the first row */
+.row > .col-lg-5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Image styling */
+.box img {
+  width: auto; /* Adjust the width based on content */
+  max-width: 300px; /* Limit image width */
+  max-height: 200px; /* Limit image height */
+  margin: 0 auto; /* Center the image */
+  object-fit: contain; /* Ensure the aspect ratio is maintained */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .box {
+    padding: 20px;
+  }
+
+  .box img {
+    max-width: 150px; /* Further reduce the image size on smaller screens */
+    max-height: 120px; /* Adjust the height on smaller screens */
+  }
+}
